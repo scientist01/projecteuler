@@ -1,0 +1,75 @@
+//A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers
+//is 9009 = 91 × 99. Find the largest palindrome made from the product of two 3-digit numbers.
+
+#include <iostream>
+  
+int main()
+{
+        int biggestPalYet{0};
+
+        for (int x{0}; x < 10; x++)
+        {
+                for (int y{0}; y < 10; y++)
+                {
+                        for (int z{0}; z < 10; z++)
+                        {
+
+
+                                for (int f1{0}; f1 < 1000; f1++)
+                                {
+                                        for (int f2{0}; f2 < 1000; f2++)
+                                        {
+                                                long a{x};      //this constructs the palindrome:
+                                                long b{y};
+                                                long c{z};
+                                                long d{z};
+                                                long e{y};
+                                                long f{x};
+
+                                                long pal{a*1e5 + b*1e4 + c*1e3 + d*1e2 + e*1e1 + f};
+
+                                                if (pal == (f1 * f2) && pal > biggestPalYet)
+                                                //check if palindrome is a product 
+                                                {
+                                                        biggestPalYet = pal;;
+                                                }
+                                        }
+                                }
+
+                        }
+                }
+        }
+
+        std::cout << biggestPalYet << "\n";
+
+        return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
