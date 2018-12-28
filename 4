@@ -1,0 +1,25 @@
+int main()
+{
+        long long edge{600851475143};
+        int prime{2};
+
+        while (prime < edge)
+        {
+                for (int test{2}; test < prime && prime % test != 0; test++)    // find a prime < edge
+                {
+                        test = prime;
+
+
+                        if (edge % prime == 0)          // test for prime being a divisor
+                        {
+                                std::cout << "Prime factor = " << prime << "\n";
+                                //now divide edge by this prime and find a prime factor for result
+                                edge /= prime;
+                                std::cout << "\n" << edge << " remaining\n";
+                        }
+                }
+                ++prime;
+        }
+
+        return 0;
+}
