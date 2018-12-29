@@ -19,14 +19,8 @@ int main()
                                 {
                                         for (int f2{0}; f2 < 1000; f2++)
                                         {
-                                                long a{x};      //this constructs the palindrome:
-                                                long b{y};
-                                                long c{z};
-                                                long d{z};
-                                                long e{y};
-                                                long f{x};
 
-                                                long pal{a*1e5 + b*1e4 + c*1e3 + d*1e2 + e*1e1 + f};
+                                                long pal{x*1e5 + y*1e4 + z*1e3 + z*1e2 + y*1e1 + x};
 
                                                 if (pal == (f1 * f2) && pal > biggestPalYet)
                                                 //check if palindrome is a product 
@@ -44,32 +38,3 @@ int main()
 
         return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
